@@ -6,3 +6,16 @@ data:
   name: "Murali"
   message: "Hello from ConfigMap"
   # You can add more key-value pairs as needed
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demo-pod
+spec:
+  containers:
+    - name: ubuntu-container
+      image: ubuntu:latest
+      command: ["sleep", "3600"]
+      envFrom: # attach the ConfigMap to the Pod's environment variables
+        - configMapRef:
+            name: ConfigMap-demo
