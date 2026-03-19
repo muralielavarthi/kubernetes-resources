@@ -1,0 +1,40 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: murali-nodeport-service
+spec:
+  type: LoadBalancer
+  selector:
+    Project: Expense
+    divison: Finance
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 30007
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx1
+  labels:
+    Project: Expense
+    divison: Finance
+spec:
+  containers:
+    - name: nginx
+      image: nginx:stable
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx2
+  labels:
+    Project: Expense
+    divison: Finance
+spec:
+  containers:
+    - name: nginx
+      image: nginx:stable
