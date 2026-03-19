@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: envar-demo
+spec:
+  containers:
+    - name: envar-container
+      image: ubuntu:latest
+      env:
+        - name: DEMO_GREETING
+          value: "Hello from the environment"
