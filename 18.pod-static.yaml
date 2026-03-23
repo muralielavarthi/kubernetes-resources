@@ -14,6 +14,6 @@ spec:
       persistentVolumeClaim:
         claimName: my-pvc-static # must match your PVC name
   nodeSelector:
-    topology.kubernetes.io/zone: us-east-1a
+    topology.kubernetes.io/zone: us-east-1c
     # Ensure the Pod is scheduled on a node which has
     # access to the EBS volume (PV) in the same availability zone.
