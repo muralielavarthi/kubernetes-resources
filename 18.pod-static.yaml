@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-with-pvc-static
+spec:
+  containers:
+    - name: app
+      image: nginx
+      volumeMounts:
+        - mountPath: /usr/share/nginx/html
+          name: my-storage # must match the volume name defined below to link (container & volume)
+  volumes:
+    - name: my-storage
+      persistentVolumeClaim:
+        claimName: my-pvc-static # must match your PVC name
