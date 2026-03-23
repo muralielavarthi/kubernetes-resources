@@ -7,6 +7,6 @@ spec:
     storage: 10Gi # Must be <= actual EBS volume size
   accessModes:
     - ReadWriteOnce # EBS supports only RWO
-  persistentVolumeReclaimPolicy: Retain
+  persistentVolumeReclaimPolicy: Retain #Lifecycle policies: Retain, Recycle, Delete
   awsElasticBlockStore:
     volumeID: vol-063fdd4828cf54e33 # EBS volume ID
