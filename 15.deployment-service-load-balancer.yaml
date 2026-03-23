@@ -5,9 +5,8 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    matchLabels:
-      Project: Expense
-      divison: Finance
+    Project: Expense
+    divison: Finance
   ports:
     - protocol: TCP
       port: 80

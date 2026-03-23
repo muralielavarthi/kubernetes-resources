@@ -8,7 +8,7 @@ spec:
     matchLabels:
       Project: Expense
       division: Finance
-  template: # This is the Pod template, will create 3 Pods with these specifications
+  template: # This is the Pod template, will create Pods with these specifications
     metadata:
       labels:
         Project: Expense
