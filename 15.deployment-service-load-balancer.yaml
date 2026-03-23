@@ -6,7 +6,7 @@ spec:
   type: LoadBalancer
   selector:
     Project: Expense
-    divison: Finance
+    division: Finance
   ports:
     - protocol: TCP
       port: 80
