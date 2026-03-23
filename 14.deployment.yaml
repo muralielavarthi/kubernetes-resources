@@ -12,11 +12,11 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nginx1
+  name: pod-demo
+  labels:
+    Project: Expense
+    divison: Finance
 spec:
   containers:
     - name: nginx
-      image: nginx:stable
-      labels:
-        Project: Expense
-        divison: Finance
+      image: nginx:1.14.2
