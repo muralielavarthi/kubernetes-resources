@@ -9,4 +9,4 @@ spec:
     - ReadWriteOnce # EBS supports only RWO
   persistentVolumeReclaimPolicy: Retain #Lifecycle policies: Retain, Recycle, Delete
   awsElasticBlockStore:
-    volumeID: vol-063fdd4828cf54e33 # EBS volume ID
+    volumeID: vol-09ef399cdc9e3c141 # EBS volume ID
