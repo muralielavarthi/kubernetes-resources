@@ -5,8 +5,9 @@ metadata:
 spec:
   replicas: 3
   selector:
-    Project: Expense
-    divison: Finance
+    matchLabels:
+      Project: Expense
+      division: Finance
 
 ---
 apiVersion: v1
@@ -15,7 +16,7 @@ metadata:
   name: pod-demo
   labels:
     Project: Expense
-    divison: Finance
+    division: Finance
 spec:
   containers:
     - name: nginx
