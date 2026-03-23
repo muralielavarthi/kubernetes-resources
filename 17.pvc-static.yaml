@@ -8,4 +8,4 @@ spec:
       storage: 5Gi # The amount of storage requested
   accessModes:
     - ReadWriteOnce # Must match the PV's access mode, this is mandatory.
-  volumeName: my-pv-static # bind to the specific PV named "my-pv-static"
+  volumeName: my-pv-static # bind PVC to the specific PV named "my-pv-static"
